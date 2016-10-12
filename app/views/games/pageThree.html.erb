@@ -76,7 +76,7 @@
 
   function changeSpeed(newSpeed) {
     clearInterval(interval);
-    speed = newSpeed;
+    speed = (1/newSpeed)*100;
     draw();
     interval = setInterval(draw, speed);
   }
