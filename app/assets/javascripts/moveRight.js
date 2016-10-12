@@ -1,3 +1,4 @@
+// redundant code to be deleted
 $(function() {
 
   var canvas = document.getElementById("canvas");
