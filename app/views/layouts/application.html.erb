@@ -7,18 +7,48 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
+  <nav class="navbar navbar-fixed-top">
+    <div class="container-fluid">
       <div class="navbar-header">
-        <a class="navbar-brand" href="#">CODE CLUCK</a>
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <%= link_to 'Code Farm', root_path, class: 'navbar-brand' %>
       </div>
-      <div id="navbar" class="collapse navbar-collapse">
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Cluck again</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Chapters <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><%= link_to 'Intro - strings', pages_welcome_path %></li>
+              <li><%= link_to 'Chapter 1 - variables', pages_page1_path %></li>
+              <li><%= link_to 'Chapter 2 - variables continued', pages_page2_path %></li>
+              <li><%= link_to 'Chapter 3 - arrays', pages_page3_path %></li>
+              <li><%= link_to 'Chapter 4 - logic', pages_page4_path %></li>
+              <li role="separator" class="divider"></li>
+              <li><%= link_to 'Sign out', '#'%></li>
+            </ul>
+          </li>
+          <li class="active"><%= link_to 'Back', :back %></li>
+          <li class="dropdown">
+          </li>
         </ul>
-      </div><!--/.nav-collapse -->
-    </div>
+        <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Signed in as: Abigail <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><%= link_to 'Sign out', '#'%></li>
+              </ul>
+            </li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
   </nav>
+
 
   <p id="notice"><%= notice %></p>
   <%= yield %>
