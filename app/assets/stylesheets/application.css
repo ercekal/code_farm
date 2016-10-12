@@ -14,3 +14,41 @@
  *= require_tree .
  *= require_self
  */
+ body {
+   /*background-color: #fafafa;*/
+   font-family: proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+ }
+
+ .navbar-brand {
+   a {
+     color: #125688;
+   }
+ }
+
+ .navbar-fixed-top {
+   background-color: #efefef;
+   height: 54px;
+
+   .navbar-nav li a {
+     color: #125688;
+   }
+
+ }
+
+ .navbar-collapse {
+   background-color: #efefef;
+
+   .navbar-nav li a {
+     color: #125688;
+   }
+
+ }
+
+ .icon-bar {
+   background-color: #203f70;
+}
+
+ .navbar-container {
+   width: 640px;
+   margin: 0 auto;
+ }
