@@ -9,8 +9,9 @@
     </div>
     <div class="col-sm-6 ">
       <div class="right-content">
+            <p>Our chicken is moving right horizontally 10 pixels each second. You can change the speed of the chicken by entering a number between 1-100 in below input field</p>
         <input type="integer" id="velocity" placeholder="50">
-        <button type="button" onclick="changeSpeed(velocity.value)">GO!</button>
+        <button type="button" onclick="changeSpeed(velocity.value)">Speed UP!</button>
       </div>
     </div>
   </div>
@@ -22,12 +23,11 @@
 
   var chicken = new Chicken(0, 20);
   var ctx = canvas.getContext('2d');
-  var speed = 50
-  var loopTimer
+  var speed = 10
 
   function changeSpeed(newSpeed) {
       clearTimeout(loopTimer);
-      speed = newSpeed;
+      speed = (1/newSpeed)*100;
       draw();
   }
 
@@ -45,14 +45,12 @@
      };
 
        function draw() {
-         ctx.save();
          chicken.create(ctx);
-         ctx.restore();
          if (chicken.x > 550)
         {
            chicken.x = 0;
          }
-         chicken.x += 3;
+         chicken.x += 1;
 
          loopTimer = setTimeout ('draw()', speed);
        }
