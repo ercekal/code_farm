@@ -1,4 +1,3 @@
-
 <div class="container-fluid">
   <div class="row">
     <div class="col-sm-6 ">
@@ -17,14 +16,21 @@
           <p> Generate a new array by entering the 'new' method below </p>
           <span>
             <p>chicken_perch = Array.<input type="text" id="newArray">(4, chickens)</p>
-            <button type="button" id="arrayNew" onclick ="draw()">Generate</button>
+            <button type="button" id="arrayNewBtn">Generate</button>
           </span><br>
 
           <p> Array items can be selected by their "index" with the first item being 0.  Have a play below by entering the index of the chickens array you created.</p>
           <span>
             <p>chicken_perch[
-              <input type="integer" id="arrayIndex">]</p>
-            <button type="button" id="arrayIndex" onclick ="chickenIndex()">Select chicken</button>
+              <input type="text" id="arrayIndex">]</p>
+            <button type="button" id="arrayIndexBtn">Select chicken</button>
+          </span>
+
+          <p> Array items can be popped. Try 'popping' off the last element.</p>
+          <span>
+            <p>chicken_perch.
+              <input type="text" id="arrayPop"></p>
+            <button type="button" id="arrayPopBtn">Pop chicken</button>
           </span>
         </div>
       </div>
@@ -32,69 +38,6 @@
   </div>
 </div>
 
-<script type="text/javascript">
-
-
-  var c= document.getElementById("canvas");
-  var ctx = c.getContext("2d");
-
-  var $newArray=document.getElementById('newArray');
-  var $arrayIndex=document.getElementById('arrayIndex')
-
-
-  function draw() {
-    if ($newArray.value === "new") {
-      ctx.clearRect(0,0,550,500);
-      ctx.fillRect(10, 225, 50, 50);
-      ctx.fillRect(110, 225, 50, 50);
-      ctx.fillRect(210, 225, 50, 50);
-      ctx.fillRect(310, 225, 50, 50);
-
-    } else {
-      alert("Incorrect!")
-    }
-  }
-function chickenIndex(){
-  var index = $arrayIndex.value
-  if (index == 0) {update0();}
-  else if (index == 1) {update1();}
-  else if (index == 2) {update2();}
-  else if (index == 3) {update3();}
-  else {
-    alert("This is not an index! ")
-  }
-}
-
-function update0() {
-  ctx.clearRect(0,0,550,500);
-  ctx.fillRect(10, 225, 100, 100);
-  ctx.fillRect(110, 225, 50, 50);
-  ctx.fillRect(210, 225, 50, 50);
-  ctx.fillRect(310, 225, 50, 50);
-}
-
-  function update1() {
-    ctx.clearRect(0,0,550,500);
-    ctx.fillRect(10, 225, 50, 50);
-    ctx.fillRect(110, 225, 100, 100);
-    ctx.fillRect(210, 225, 50, 50);
-    ctx.fillRect(310, 225, 50, 50);
-  }
-
-  function update2() {
-    ctx.clearRect(0,0,550,500);
-    ctx.fillRect(10, 225, 50, 50);
-    ctx.fillRect(110, 225, 50, 50);
-    ctx.fillRect(210, 225, 100, 100);
-    ctx.fillRect(310, 225, 50, 50);
-  }
-
-  function update3() {
-    ctx.clearRect(0,0,550,500);
-    ctx.fillRect(10, 225, 50, 50);
-    ctx.fillRect(110, 225, 50, 50);
-    ctx.fillRect(210, 225, 50, 50);
-    ctx.fillRect(310, 225, 100, 100);
-  }
-
-  </script>
+<script>
+  document.onload = loadPageThree();
+</script>

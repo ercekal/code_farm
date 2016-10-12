@@ -50,7 +50,6 @@ body > .container-fluid {
 }
 
 canvas {
-  border-style: dashed;
   padding-left: 0;
   padding-right: 0;
   margin-left: auto;
