@@ -1,7 +1,6 @@
 require 'rails_helper'
-require 'helper'
 
-feature 'welcome' do
+feature 'welcome', :js => true do
 
   context 'content of page prior to interaction' do
 
@@ -14,24 +13,36 @@ feature 'welcome' do
 
   scenario 'user can input name' do
     visit '/pages/welcome'
-    wait_for_ajax
-    fill_in 'name_input', with: 'test'
+    fill_in 'name_input', with: 'Test'
     click_button 'Add your name!'
-    expect(page).to have_content 'Welcome, test!'
+
+    expect(page).to have_content 'Welcome, Test!'
   end
 
-#   context 'restaurants have been added' do
-#     before do
-#       Restaurant.create(name: 'KFC')
-#     end
-#
-#     scenario 'display restaurants' do
-#       visit '/restaurants'
-#       expect(page).to have_content('KFC')
-#       expect(page).not_to have_content('No restaurants yet')
-#     end
-#   end
+  context 'buttons manipulate name string' do
 
-# fill_in 'Description', with: 'Deep fried goodness'
-#      click_button 'Update Restaurant'
+    scenario 'upcase capitalizes name' do
+      enter_name
+      click_button '.upcase'
+      expect(page).to have_content 'Welcome, TEST!'
+    end
+
+    scenario 'downcase makes name lowercase' do
+      enter_name
+      click_button '.downcase'
+      expect(page).to have_content 'Welcome, test!'
+    end
+
+    scenario 'reverse prints name backwards' do
+      enter_name
+      click_button '.reverse'
+      expect(page).to have_content 'Welcome, tseT!'
+    end
+
+    scenario 'replaces vowels in name with stars' do
+      enter_name
+      click_button '.replace (vowels with a ★!)'
+      expect(page).to have_content 'Welcome, T★st!'
+    end
+  end
 end
