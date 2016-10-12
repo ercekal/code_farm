@@ -27,10 +27,11 @@
   var posX = 200;
   var posY = 200;
   var sign = 1;
+  var interval;
 
   function init() {
     canvas = document.getElementById("canvas");
-    var interval = setInterval(draw, speed);
+    interval = setInterval(draw, speed);
     ctx = canvas.getContext('2d');
     loadGraphics();
   }
@@ -74,9 +75,10 @@
   }
 
   function changeSpeed(newSpeed) {
-      clearTimeout(loopTimer);
-      speed = newSpeed;
-      draw();
+    clearInterval(interval);
+    speed = newSpeed;
+    draw();
+    interval = setInterval(draw, speed);
   }
 
   function updatePositions() {
