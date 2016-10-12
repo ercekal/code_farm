@@ -20,6 +20,6 @@ function reverse(name){
 }
 
 function replace(name){
-  var replace = name.replace(/A|a|E|e|I|i|O|o|U|u/g, "★")
+  var replace = name.replace(/A|a|E|e|I|i|O|o|U|u/g, "★");
   replaceName(replace, "name.replace");
 }
