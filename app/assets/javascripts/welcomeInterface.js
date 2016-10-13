@@ -1,6 +1,9 @@
+function assignName(name){
+  $("#name_variable").html(name);
+}
+
 function replaceName(name, code_name){
   $(".name").html(name);
-  $("#name_variable").replaceWith(name);
   $("#code_name").html(code_name);
 }
 
