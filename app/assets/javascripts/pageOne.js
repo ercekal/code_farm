@@ -4,10 +4,10 @@ function loadPageOne() {
     var ctx;
     var chicken;
 
-    var width = 300;
-    var height = 400;
-    var x = 0;
-    var y = 0;
+    var width = 129;
+    var height = 240;
+    var x = 410;
+    var y = 340;
 
     var $width=document.getElementById('width');
     var $height=document.getElementById('height');
@@ -39,47 +39,23 @@ function loadPageOne() {
     }
 
     $width.addEventListener("keyup", function(){
-      if ((Number(x) + Number(this.value)) > 550) {
-        $width.value = 0;
-        distance1 = (550 - x);
-        alert('Please enter a number larger than 0 and smaller than ' + distance1);
-      } else {
         width=this.value;
         draw();
-    }
     });
 
     $height.addEventListener("keyup", function(){
-      if ((Number(y) + Number(this.value)) > 500) {
-        $height.value = 0;
-        distance2 = (500 - y);
-        alert('Please enter a number larger than 0 and smaller than ' + distance2);
-      } else {
       height=this.value;
       draw();
-    }
     });
 
     $xPosition.addEventListener("keyup", function(){
-      if ((Number(width) + Number(this.value)) > 550) {
-        $xPosition.value = 0;
-        distance3 = (550 - width);
-        alert('Please enter a number smaller larger than 0 and smaller than ' + distance3);
-      } else {
       x=this.value;
       draw();
-    }
     });
 
     $yPosition.addEventListener("keyup", function(){
-      if ((Number(height) + Number(this.value)) > 550) {
-        $yPosition.value = 0;
-        distance4 = (550 - height);
-        alert('Please enter a number larger than 0 and smaller than ' + distance4);
-      } else {
       y=this.value;
       draw();
-    }
     });
 
     function drawSprite(imageObject, x, y, rotation, scale) {
