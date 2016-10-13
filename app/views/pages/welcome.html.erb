@@ -4,14 +4,17 @@
 
     <div class="col-sm-6 ">
       <div class="left-content">
-          <h3>name = <span id="name_variable"></span></h3>
-
-          <h4>puts "Welcome, #{<span id="code_name">name</span>}!"</h4>
-          <!-- <h4 id="name_upcase">puts "Welcome, #{name.upcase}!"</h4>
-          <h4 id="name_reverse">puts "Welcome, #{name.reverse}!"</h4>
-          <h4 id="name_">puts "Welcome, #{name.replace}!"</h4> -->
-
-          <h3>Welcome, <span class="name" ></span>!</h3>
+        <div class="pretend-canvas">
+          <div class="code-input">
+            <h3>name = <span id="name_variable"></span></h3>
+          </div>
+          <div class="code-input">
+            <h4>puts "Welcome, #{<span id="code_name">name</span>}!"</h4>
+          </div>
+          <div class="code-output">
+            <h3>Welcome, <span class="name" ></span>!</h3>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -35,14 +38,20 @@
           Why dont you see if you can guess what changes the buttons below make and then click on them to see what happens.
         </p>
 
-        <span>
-          <button onclick="upcase(name_input.value)">.upcase</button>
-          <button onclick="downcase(name_input.value)">.downcase</button>
-          <button onclick="reverse(name_input.value)">.reverse</button>
-          <button onclick="replace(name_input.value)">.replace (vowels with a ★!)</button>
-        </span>
+        <div class="buttons">
+          <span>
+            <button onclick="upcase(name_input.value)">.upcase</button>
+            <button onclick="downcase(name_input.value)">.downcase</button>
+            <button onclick="reverse(name_input.value)">.reverse</button>
+            <button onclick="replace(name_input.value)">.replace (vowels with a ★!)</button>
+          </span>
+        </div>
       </div>
     </div>
 
   </div>
+</div>
+
+<div class=fence>
+  <img src="../images/fence.png" alt="Fence" class="center-block" width="100%" height="60%" />
 </div>

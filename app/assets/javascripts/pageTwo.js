@@ -43,7 +43,7 @@ function draw() {
 
 function renderScene() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  drawSprite(chicken, posX, posY, spriteRotation, 0.5);
+  drawSprite(chicken, posX, posY, spriteRotation, 0.6);
 }
 
 function updateScene() {
