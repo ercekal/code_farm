@@ -9,6 +9,8 @@ var sign = 1;
 var interval;
 var chickenSpeed = 1;
 var $velocity=document.getElementById('velocity');
+var ctx;
+
 
 init();
 
@@ -25,6 +27,7 @@ $velocity.addEventListener("keyup", function(){
 });
 
 function init() {
+  document.getElementById('progressBarContainer').innerHTML = "";
   canvas = document.getElementById("canvas");
   ctx = canvas.getContext('2d');
   calculateSpeed(1);
@@ -33,7 +36,7 @@ function init() {
 }
 
 function progressBar() {
-  var bar = new ProgressBar.SemiCircle(progressBarContainer, {
+  bar = new ProgressBar.SemiCircle(progressBarContainer, {
   strokeWidth: 6,
   color: '#FFEA82',
   trailColor: '#eee',
@@ -50,7 +53,7 @@ function progressBar() {
   // Set default step function for all animate calls
   step: (state, bar) => {
     bar.path.setAttribute('stroke', state.color);
-    var value = Math.round(bar.value() * 100);
+    value = Math.round(bar.value() * 100);
     if (value === 0) {
       bar.setText('');
     } else {

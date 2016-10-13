@@ -2,8 +2,7 @@ function loadHomePage() {
   chicken = new Chicken(0,0);
   canvas = document.getElementById("homeCanvas");
   ctx = canvas.getContext('2d');
-
-      draw();
+  drawChicken();
 }
 
 var chicken;
@@ -52,7 +51,7 @@ Chicken.prototype.update = function () {
 
 };
 
-function draw() {
+function drawChicken() {
   chicken.draw(ctx);
-  var loopTimer = setTimeout ('draw();', 100)
+  var loopTimer = setTimeout ('drawChicken();', 100)
 }

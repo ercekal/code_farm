@@ -5,11 +5,12 @@ var chicken;
 var spriteRotation = 0;
 var interval;
 var $newArray=document.getElementById('newArray');
-var $arrayIndex=document.getElementById('arrayIndex')
-var $arrayPop=document.getElementById('arrayPop')
-var $arrayNewBtn=document.getElementById('arrayNewBtn')
-var $arrayIndexBtn=document.getElementById('arrayIndexBtn')
-var $arrayPopBtn=document.getElementById('arrayPopBtn')
+var $arrayIndex=document.getElementById('arrayIndex');
+var $arrayPop=document.getElementById('arrayPop');
+var $arrayNewBtn=document.getElementById('arrayNewBtn');
+var $arrayIndexBtn=document.getElementById('arrayIndexBtn');
+var $arrayPopBtn=document.getElementById('arrayPopBtn');
+var ctx;
 
 
 function init() {
@@ -42,24 +43,24 @@ function renderScene() {
     drawSprite(chicken, 350, 225, 0, 0.4);
     drawSprite(chicken, 450, 225, 0, 0.4);
   } else {
-    alert("Try again!")
+    alert("Try again!");
   }
 }
 
 $arrayIndexBtn.addEventListener("click", function(){
-  var index = $arrayIndex.value
+  var index = $arrayIndex.value;
   if (index == "0") {update0();}
   else if (index == "1") {update1();}
   else if (index == "2") {update2();}
   else if (index == "3") {update3();}
   else {
-    alert("This is not an index! ")
+    alert("This is not an index! ");
   }
 });
 
 $arrayPopBtn.addEventListener("click", function(){
   if ($arrayPop.value == "pop") {interval = setInterval(chickenPop, 20);}
-  else { alert("Try again!")}
+  else { alert("Try again!"); }
 });
 
 function chickenPop() {
