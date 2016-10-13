@@ -7,13 +7,13 @@ var posX = 200;
 var posY = 250;
 var sign = 1;
 var interval;
-var speed = 1;
+var chickenSpeed = 1;
 var $velocity=document.getElementById('velocity');
 
 init();
 
-function updateSpeed(speed) {
-  $("#current_speed").html(speed);
+function updateSpeed(chickenSpeed) {
+  $("#current_speed").html(chickenSpeed);
 }
 
 $velocity.addEventListener("keyup", function(){
@@ -54,7 +54,7 @@ function progressBar() {
     if (value === 0) {
       bar.setText('');
     } else {
-      bar.setText(value);
+      bar.setText(value/10);
     }
 
     bar.text.style.color = state.color;
@@ -63,12 +63,12 @@ function progressBar() {
   bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
   bar.text.style.fontSize = '2rem';
 
-  bar.animate(speed/1000);  // Number from 0.0 to 1.0
+  bar.animate((1/chickenSpeed)*10);  // Number from 0.0 to 1.0
 }
 
 function calculateSpeed(inputSpeed) {
-  speed = (1/inputSpeed)*100;
-  interval = setInterval(draw, speed);
+  chickenSpeed = (1/inputSpeed)*100;
+  interval = setInterval(draw, chickenSpeed);
   updateSpeed(inputSpeed);
 }
 
