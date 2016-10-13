@@ -118,6 +118,20 @@ canvas {
   margin-bottom: 40px;
 }
 
+.left-bracket {
+  position: absolute;
+    left: 7%;
+    top: 30%;
+  margin-bottom: 40px;
+}
+
+.right-bracket {
+  position: absolute;
+    left: 36%;
+    top: 30%;
+  margin-bottom: 40px;
+}
+
 .toggle_button {
   text-align: right;
 }
