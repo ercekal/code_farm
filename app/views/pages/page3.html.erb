@@ -9,28 +9,46 @@
       <div class="right-content">
         <h1>Arrays</h1>
         <div class="arraysDescription">
-          <p>
-            An array is a structure that contains a group of items. Typically these items are all of the same type, for instance our chicken perch represents an array containing a group of chickens.
-          </p>
-          <p> Generate a new array by entering the 'new' method below </p>
-          <span>
-            <p>chicken_perch = Array.<input type="text" id="newArray">(4, chickens)</p>
-            <button type="button" id="arrayNewBtn">Generate</button>
-          </span><br>
+          <div class='div1'>
+            <p>
+              An array is a structure that contains a group of items. Typically these items are all of the same type, for instance our chicken perch represents an array containing a group of chickens.
+            </p>
+            <p>
+              Generate a new array by entering the 'new' method below
+            </p>
+            <span>
+              <p>chicken_perch = Array.<input type="text" id="newArray">(4, chickens)</p>
+              <button type="button" id="arrayNewBtn">Generate</button>
+            </span><br>
+          </div>
 
-          <p> Array items can be selected by their "index" with the first item being 0.  Have a play below by entering the index of the chickens array you created.</p>
-          <span>
-            <p>chicken_perch[
-              <input type="text" id="arrayIndex">]</p>
-            <button type="button" id="arrayIndexBtn">Select chicken</button>
-          </span>
+          <div class='div2' style="display:none">
+            <p> Array items can be selected by their "index" with the first item being 0.  Have a play below by entering the index of the chickens array you created.</p>
+            <span>
+              <p>chicken_perch[
+                <input type="text" id="arrayIndex">]</p>
+              <button type="button" id="arrayIndexBtn">Select chicken</button>
+            </span>
+          </div>
 
-          <p> Array items can be popped. Try 'popping' off the last element.</p>
-          <span>
-            <p>chicken_perch.
-              <input type="text" id="arrayPop"></p>
-            <button type="button" id="arrayPopBtn">Pop chicken</button>
-          </span>
+          <div class='div3' style="display:none">
+            <p> Array items can be popped. Try 'popping' off the last element.</p>
+            <span>
+              <p>chicken_perch.
+                <input type="text" id="arrayPop"></p>
+              <button type="button" id="arrayPopBtn">Pop chicken</button>
+            </span>
+          </div>
+          <div class="div3">
+            <div class="toggle_button">
+              <a href="javascript:void(0);" id="toggle_value">Next</a>
+            </div>
+          </div>
+          <div class="div4" style="display:none">
+            <div class="toggle_button">
+              <a href="#" id="toggle_value">Next</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -38,14 +56,19 @@
 </div>
 
 <div class=fence>
-  <img src="../images/fence.png" alt="Fence" class="center-block" width="100%" height="60%" />
+  <img src="../images/fence3.png" alt="Fence" class="center-block" width="100%" height="60%" />
 </div>
 
 <script>
   document.onload = loadPageThree();
 
-  $(".next-button").click(function(){
-    $('.content-1').hide();
-
-  })
+  $("#toggle_value").click((function(){
+          var counter = 1;
+          return function()
+          {
+             $(".div" + counter).hide();
+             counter = (counter ) + 1;
+             $(".div" + counter).show();
+          }
+          })());
 </script>
