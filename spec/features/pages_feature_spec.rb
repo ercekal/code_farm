@@ -31,20 +31,10 @@ feature 'Pages' do
       visit '/'
       click_link 'Chapter 2 - variables continued'
       expect(current_path).to eq pages_page2_path
-      expect(page).to have_content "Change Chicken Speed!"
+      expect(page).to have_content "Chicken spin!"
     end
-  end
-
-  context 'Page 2' do
-    scenario 'visit the second variables page' do
-      visit '/'
-      click_link 'Chapter 2 - variables continued'
-      expect(current_path).to eq pages_page2_path
-      expect(page).to have_content "Change Chicken Speed!"
-    end
-    scenario 'check speed' do
-      visit '/'
-      click_link 'Chapter 2 - variables continued'
+    scenario 'check speed', :js => true do
+      visit '/pages/page2'
       expect(page).to have_content "Current speed: 1"
     end
   end
