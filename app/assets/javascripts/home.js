@@ -8,6 +8,7 @@ function loadHomePage() {
 var chicken;
 var canvas;
 var ctx;
+var codeRuns = 0
 
 function Chicken(xPos, yPos) {
   this.x = xPos;
