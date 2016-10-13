@@ -20,7 +20,7 @@ $velocity.addEventListener("keyup", function(){
   clearInterval(interval);
   draw();
   calculateSpeed(this.value);
-  document.getElementById('progressBarContainer').innerHTML = ""
+  document.getElementById('progressBarContainer').innerHTML = "";
   progressBar();
 });
 
