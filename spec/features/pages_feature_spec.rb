@@ -35,6 +35,20 @@ feature 'Pages' do
     end
   end
 
+  context 'Page 2' do
+    scenario 'visit the second variables page' do
+      visit '/'
+      click_link 'Chapter 2 - variables continued'
+      expect(current_path).to eq pages_page2_path
+      expect(page).to have_content "Change Chicken Speed!"
+    end
+    scenario 'check speed' do
+      visit '/'
+      click_link 'Chapter 2 - variables continued'
+      expect(page).to have_content "Current speed: 1"
+    end
+  end
+
   context 'Page 3' do
     scenario 'visit the arrays page' do
       visit '/'
