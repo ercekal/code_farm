@@ -30,7 +30,7 @@ function loadGraphics() {
   chicken = loadSprite('../images/flatChicken.png');
 }
 
-function loadSprite(imageNamrspe) {
+function loadSprite(imageName) {
   var image = new Image();
   image.src = imageName;
   return image;
