@@ -20,6 +20,8 @@ $velocity.addEventListener("keyup", function(){
   clearInterval(interval);
   draw();
   calculateSpeed(this.value);
+  document.getElementById('progressBarContainer').innerHTML = ""
+  progressBar();
 });
 
 function init() {
@@ -27,6 +29,41 @@ function init() {
   ctx = canvas.getContext('2d');
   calculateSpeed(1);
   loadGraphics();
+  progressBar();
+}
+
+function progressBar() {
+  var bar = new ProgressBar.SemiCircle(progressBarContainer, {
+  strokeWidth: 6,
+  color: '#FFEA82',
+  trailColor: '#eee',
+  trailWidth: 1,
+  easing: 'easeInOut',
+  duration: 1400,
+  svgStyle: null,
+  text: {
+    value: '',
+    alignToBottom: false
+  },
+  from: {color: '#FFEA82'},
+  to: {color: '#ED6A5A'},
+  // Set default step function for all animate calls
+  step: (state, bar) => {
+    bar.path.setAttribute('stroke', state.color);
+    var value = Math.round(bar.value() * 100);
+    if (value === 0) {
+      bar.setText('');
+    } else {
+      bar.setText(value);
+    }
+
+    bar.text.style.color = state.color;
+  }
+  });
+  bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
+  bar.text.style.fontSize = '2rem';
+
+  bar.animate(speed/1000);  // Number from 0.0 to 1.0
 }
 
 function calculateSpeed(inputSpeed) {
@@ -81,4 +118,5 @@ function updatePositions() {
   }
   posX = posX + (3 * sign);
 }
+
 }
