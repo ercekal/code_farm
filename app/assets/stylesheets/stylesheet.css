@@ -12,7 +12,7 @@ body {
   bottom: 0;
   width: 100%;
   height: 60px;
-  background-color: #559977;
+  background-color: #3C8A47;
 }
 
 /* Custom page CSS
@@ -116,4 +116,8 @@ canvas {
     right: 0;
     bottom: 0;
   margin-bottom: 40px;
+}
+
+.toggle_button {
+  text-align: right;
 }
