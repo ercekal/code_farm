@@ -1,5 +1,5 @@
 function loadPageTwo() {
-init();
+
 var canvas;
 var chicken;
 var spriteRotation = 0;
@@ -7,23 +7,32 @@ var posX = 200;
 var posY = 250;
 var sign = 1;
 var interval;
-
+var speed = 1;
 var $velocity=document.getElementById('velocity');
 
+init();
 
+function updateSpeed(speed) {
+  $("#current_speed").html(speed);
+}
 
 $velocity.addEventListener("keyup", function(){
   clearInterval(interval);
-  speed = (1/this.value)*100;
   draw();
-  interval = setInterval(draw, speed);
+  calculateSpeed(this.value);
 });
 
 function init() {
   canvas = document.getElementById("canvas");
-  interval = setInterval(draw, 100);
   ctx = canvas.getContext('2d');
+  calculateSpeed(1);
   loadGraphics();
+}
+
+function calculateSpeed(inputSpeed) {
+  speed = (1/inputSpeed)*100;
+  interval = setInterval(draw, speed);
+  updateSpeed(inputSpeed);
 }
 
 function loadGraphics() {
