@@ -55,14 +55,4 @@
 
 <script>
   document.onload = loadPageFour();
-
-  $("#toggle_value").click((function(){
-          var counter = 1;
-          return function()
-          {
-             $(".div" + counter).hide();
-             counter = (counter ) + 1;
-             $(".div" + counter).show();
-          }
-          })());
 </script>
