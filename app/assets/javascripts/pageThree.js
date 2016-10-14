@@ -5,11 +5,12 @@ var chicken;
 var spriteRotation = 0;
 var interval;
 var $newArray=document.getElementById('newArray');
-var $arrayIndex=document.getElementById('arrayIndex')
-var $arrayPop=document.getElementById('arrayPop')
-var $arrayNewBtn=document.getElementById('arrayNewBtn')
-var $arrayIndexBtn=document.getElementById('arrayIndexBtn')
-var $arrayPopBtn=document.getElementById('arrayPopBtn')
+var $arrayIndex=document.getElementById('arrayIndex');
+var $arrayPop=document.getElementById('arrayPop');
+var $arrayNewBtn=document.getElementById('arrayNewBtn');
+var $arrayIndexBtn=document.getElementById('arrayIndexBtn');
+var $arrayPopBtn=document.getElementById('arrayPopBtn');
+var ctx;
 
 
 function init() {
@@ -31,8 +32,8 @@ function loadSprite(imageName) {
 // user initiated functions
 
 $arrayNewBtn.addEventListener("click", function(){
-  var newArray = $newArray
-    if (newArray.checkValidity() == false) {
+  var newArray = $newArray;
+    if (newArray.checkValidity() === false) {
         document.getElementById("demo").innerHTML = "Sorry, that's not the right method!";
     } else {
         document.getElementById("demo").innerHTML = "";
@@ -51,10 +52,8 @@ function renderScene() {
 }
 
 $arrayIndexBtn.addEventListener("click", function(){
-  var index = $arrayIndex
-  console.log(index);
-  console.log(index.checkValidity());
-    if (index.checkValidity() == false) {
+  var index = $arrayIndex;
+    if (index.checkValidity() === false) {
         document.getElementById("demo2").innerHTML = "Sorry, no chicken has that index!";
     } else {
         document.getElementById("demo2").innerHTML = "";
@@ -70,8 +69,8 @@ function changeIndex(index) {
 }
 
 $arrayPopBtn.addEventListener("click", function(){
-  var arrayPop = $arrayPop
-    if (arrayPop.checkValidity() == false) {
+  var arrayPop = $arrayPop;
+    if (arrayPop.checkValidity() === false) {
         document.getElementById("demo3").innerHTML = "Sorry, that's not the right method!";
     } else {
         document.getElementById("demo3").innerHTML = "";

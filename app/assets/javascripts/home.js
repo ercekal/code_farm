@@ -2,20 +2,21 @@ function loadHomePage() {
   chicken = new Chicken(0,0);
   canvas = document.getElementById("homeCanvas");
   ctx = canvas.getContext('2d');
-
-      draw();
+  if (loopTimer) { clearTimeout(loopTimer); }
+  drawChicken();
 }
 
 var chicken;
 var canvas;
 var ctx;
+var loopTimer;
 
 function Chicken(xPos, yPos) {
   this.x = xPos;
   this.y = yPos;
   this.state = 0;
   this.image = new Image();
-  this.image.src = '../images/4chickens.png';
+  this.image.src = '../images/HeadWobbleandFlap.png';
   this.width = 400;
   this.height= 600;
   this.frameIndex = 0;
@@ -52,7 +53,7 @@ Chicken.prototype.update = function () {
 
 };
 
-function draw() {
+function drawChicken() {
   chicken.draw(ctx);
-  var loopTimer = setTimeout ('draw();', 100)
+   loopTimer = setTimeout ('drawChicken();', 400)
 }
