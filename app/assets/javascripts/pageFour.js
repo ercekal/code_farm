@@ -12,6 +12,8 @@ var $empty = document.getElementById('empty');
 var $if_button = document.getElementById('if_button');
 var $feedback = document.getElementById('feedback');
 var $error_msg = document.getElementById('error_msg');
+var question = document.getElementById("question");
+var farm = document.getElementById("farm");
 
 function init() {
   canvas = document.getElementById("canvas");
@@ -27,6 +29,11 @@ function loadSprite(imageName) {
   var image = new Image();
   image.src = imageName;
   return image;
+}
+
+function changeVisibility() {
+  question.style.display = "none";
+  farm.style.display = "block";
 }
 
 function drawSprite(imageObject, x, y, rotation, scale) {
@@ -46,18 +53,22 @@ function drawSprite(imageObject, x, y, rotation, scale) {
 $getChickens.addEventListener("click", function(){
   if($chickenGenerate.value === "1") {
     $farm.style.display = "block";
+    changeVisibility();
     $error_msg.innerHTML = "";
     renderScene1();
   } else if ($chickenGenerate.value === "2") {
     $farm.style.display = "block";
+    changeVisibility();
     $error_msg.innerHTML = "";
     renderScene2();
   } else if ($chickenGenerate.value === "3") {
     $farm.style.display = "block";
+    changeVisibility();
     $error_msg.innerHTML = "";
     renderScene3();
   } else if ($chickenGenerate.value === "4") {
     $farm.style.display = "block";
+    changeVisibility();
     $error_msg.innerHTML = "";
     renderScene4();
   } else {
