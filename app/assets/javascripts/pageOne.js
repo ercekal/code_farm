@@ -2,7 +2,6 @@ function loadPageOne() {
     if (currentUserName !== undefined){
     $("#user_name").html("Signed in as " + currentUserName); }
     if (loopTimer) { clearTimeout(loopTimer); }
-    if (interval) { clearInterval(interval); }
 
     init();
     var c;
@@ -28,7 +27,7 @@ function loadPageOne() {
       c = document.getElementById("canvas");
       ctx = c.getContext("2d");
       loadGraphics();
-      loopTimer = setTimeout(draw, 1000);
+      loopTimer = setTimeout(draw, 500);
     }
 
     function loadGraphics() {
