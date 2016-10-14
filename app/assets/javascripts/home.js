@@ -1,14 +1,26 @@
+var chicken;
+var canvas;
+var codeRuns = 0
+
 function loadHomePage() {
+  pageLoadRefresh();
   chicken = new Chicken(0,0);
   canvas = document.getElementById("homeCanvas");
   ctx = canvas.getContext('2d');
   drawChicken();
 }
 
-var chicken;
-var canvas;
-var ctx;
-var codeRuns = 0
+function pageLoadRefresh() {
+  if (window.location.href === "http://localhost:3000/") {
+  codeRuns += 1
+  }
+  if (codeRuns > 1) {
+    window.location.reload();
+  }
+}
+
+
+
 
 function Chicken(xPos, yPos) {
   this.x = xPos;
