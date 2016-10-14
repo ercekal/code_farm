@@ -8,14 +8,14 @@
         <div class="text-center" >
           <h1>Welcome to Code Farm!</h1>
         </div>
-        <canvas id="homeCanvas" width="450" height="650"></canvas>
-
+        <%= link_to pages_welcome_path do %>
+          <canvas id="homeCanvas" width="450" height="650"></canvas>
+        <% end %>
       </div>
     </div>
 
   </div>
 </div>
-
 
 <script type="text/javascript">
   document.onload = loadHomePage();

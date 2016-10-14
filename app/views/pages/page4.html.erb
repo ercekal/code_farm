@@ -9,6 +9,7 @@
       <div class="right-content">
         <h1>Logic</h1>
         <div class="arraysDescription">
+
           <div class="div1">
             <p>
               <b>IF</b> and <b>ELSE</b> decides what our code does depending on what we tell it to look out for. <b>IF</b> says.... "if this thing is true, do what is on the line below. <b>ELSE</b> says... if what we said above isn't true, do the next line. </p>
@@ -21,13 +22,12 @@
               <p id="error_msg"></p>
             </span>
           </div>
-          <div class="row" id="farm" style="display: none;" >
-            <br>
+
+          <div class="div2" id="farm" style="display: none;" >
             <p>The farm can only have 4 chickens at a time. try changing the number of chickens and see if you can discover how the code below works </p>
             <p>(it checks if the farm is full).  </p>
-              <br>
-            <div class="col-sm-5">
 
+            <div class="col-sm-5">
               <p><b>IF</b> there are 4 chickens</p>
               <p>   puts "the farm is full"</p>
               <p><b>ELSE</b></p>
@@ -35,15 +35,19 @@
               <p><b>END</b></p>
               <br>
               <button type="button" id="if_button">Check if the farm is full</button>
-            <br>
-          </div>
-          <div class="col-sm-7" id="feedback" style="display: none;" >
-            <h1 id= "full" style= "display: none;">THE FARM IS FULL</h1>
-              <h1 id= "empty" style= "display: none;">CHICKENS WELCOME</h1>
+              <br>
+            </div>
 
-            <br>
+            <div class="col-sm-7" id="feedback" style="display: none;" >
+              <h1 id= "full" style= "display: none;">THE FARM IS FULL</h1>
+              <h1 id= "empty" style= "display: none;">CHICKENS WELCOME</h1>
+          </div>
+
+          <div class="toggle_button">
+            <%= link_to 'Play again!', pages_home_path %>
           </div>
         </div>
+
         </div>
       </div>
     </div>
