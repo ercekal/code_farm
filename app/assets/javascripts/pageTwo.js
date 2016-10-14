@@ -26,6 +26,7 @@ $velocity.addEventListener("keyup", function(){
   calculateSpeed(this.value);
   document.getElementById('progressBarContainer').innerHTML = "";
   progressBar();
+  overload();
 });
 
 function init() {
@@ -122,6 +123,14 @@ function updatePositions() {
     sign = 1;
   }
   posX = posX + (3 * sign);
+}
+
+function overload(){
+  if($velocity.value > 20){
+    $(".overload").show();
+    setTimeout(function() { $(".overload").hide(); }, 3000);
+    $velocity.value = 1;
+  }
 }
 
 }
