@@ -10,7 +10,6 @@ function loadHomePage() {
 
 var chicken;
 var canvas;
-var ctx;
 var loopTimer;
 
 function Chicken(xPos, yPos) {

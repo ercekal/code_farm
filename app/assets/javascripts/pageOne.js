@@ -1,10 +1,13 @@
 function loadPageOne() {
     if (currentUserName !== undefined){
     $("#user_name").html("Signed in as " + currentUserName); }
+    if (loopTimer) { clearTimeout(loopTimer); }
+    if (interval) { clearInterval(interval); }
+
     init();
     var c;
-    var ctx;
     var chicken;
+    var loopTimer;
 
     var width = 129;
     var height = 240;
@@ -25,9 +28,7 @@ function loadPageOne() {
       c = document.getElementById("canvas");
       ctx = c.getContext("2d");
       loadGraphics();
-      setTimeout(draw, 1000);
-      console.log(chicken.width);
-      console.log(chicken.height);
+      loopTimer = setTimeout(draw, 1000);
     }
 
     function loadGraphics() {
@@ -41,21 +42,25 @@ function loadPageOne() {
     }
 
     $width.addEventListener("keyup", function(){
+      ctx.clearRect(0,0,750,700);
         width=this.value;
         draw();
     });
 
     $height.addEventListener("keyup", function(){
+      ctx.clearRect(0,0,750,700);
       height=this.value;
       draw();
     });
 
     $xPosition.addEventListener("keyup", function(){
+      ctx.clearRect(0,0,750,700);
       x=this.value;
       draw();
     });
 
     $yPosition.addEventListener("keyup", function(){
+      ctx.clearRect(0,0,750,700);
       y=this.value;
       draw();
     });
@@ -74,7 +79,7 @@ function loadPageOne() {
     }
 
     function draw() {
-      ctx.clearRect(0,0,canvas.width,canvas.height);
+      ctx.clearRect(0,0,750,700);
       drawSprite(chicken, x, y, 0, 1);
     }
 

@@ -21,33 +21,60 @@
     <div class="col-sm-6 ">
       <div class="right-content">
         <h1>Hello!</h1>
-        <p>
-          Welcome to CODE CLUCK! You are going to learn some really cool computer tricks over the next few lessons. I'm so excited to learn with you!
-        </p>
-        <p>Enter your name in the box below and see it appear on the other side!</p>
+
+        <div class="div1">
+          <p>
+            Welcome to CODE FARM! You are going to learn some really cool computer tricks over the next few chapters. I'm so excited to learn with you!
+          </p>
+          <p>Enter your name in the box below and see it appear on the other side!</p>
         <span>
-          <input type="string" id="name_input" placeholder="put your name here.">
+          name = <input type="string" id="name_input" placeholder="add your name here.">
           <button onclick="replaceName(name_input.value,'name'); assignName(name_input.value)">Add your name!</button>
         </span>
-        <br>
-        <br>
-        <p>
-          You see how your name gets attached to the word name at the top? This is called a variable, we will learn more about this later.
-        </p>
-        <p>
-          Why dont you see if you can guess what changes the buttons below make and then click on them to see what happens.
-        </p>
-
-        <div class="buttons">
-          <span>
-            <button onclick="upcase(name_input.value)">.upcase</button>
-            <button onclick="downcase(name_input.value)">.downcase</button>
-            <button onclick="reverse(name_input.value)">.reverse</button>
-            <button onclick="replace(name_input.value)">.replace (vowels with a ★!)</button>
-          </span>
         </div>
+
+        <div class="div2" style="display:none">
+          <p>
+            You see how your name gets attached to the word name at the top? This is called a variable, we will learn more about this later.
+          </p>
+          <p>
+            Why dont you see if you can guess what changes the buttons below make and then click on them to see what happens.
+          </p>
+          <div class="buttons">
+            <span>
+              <button onclick="upcase(name_input.value)">.upcase</button>
+              <button onclick="downcase(name_input.value)">.downcase</button>
+              <button onclick="reverse(name_input.value)">.reverse</button>
+              <button onclick="replace(name_input.value)">.replace (vowels with a ★!)</button>
+            </span>
+          </div>
+        </div>
+
+        <div class="div1">
+          <div class="toggle_button">
+            <a href="javascript:void(0);" id="toggle_value">Next</a>
+          </div>
+        </div>
+        <div class="div2" style="display:none">
+          <div class="toggle_button">
+            <%= link_to 'Next', pages_page1_path %>
+          </div>
+        </div>
+
       </div>
     </div>
 
   </div>
 </div>
+
+<script>
+  $("#toggle_value").click((function(){
+          var counter = 1;
+          return function()
+          {
+             $(".div" + counter).hide();
+             counter = counter + 1;
+             $(".div" + counter).show();
+          }
+  })());
+</script>

@@ -1,6 +1,11 @@
 function loadPageTwo() {
 if (currentUserName !== undefined){
 $("#user_name").html("Signed in as " + currentUserName); }
+
+if (loopTimer) { clearTimeout(loopTimer); }
+if (interval) { clearInterval(interval); }
+
+var ctx;
 var canvas;
 var chicken;
 var spriteRotation = 0;
@@ -10,7 +15,6 @@ var sign = 1;
 var interval;
 var chickenSpeed = 1;
 var $velocity=document.getElementById('velocity');
-var ctx;
 
 
 init();
@@ -25,6 +29,7 @@ $velocity.addEventListener("keyup", function(){
   calculateSpeed(this.value);
   document.getElementById('progressBarContainer').innerHTML = "";
   progressBar();
+  overload();
 });
 
 function init() {
@@ -121,6 +126,14 @@ function updatePositions() {
     sign = 1;
   }
   posX = posX + (3 * sign);
+}
+
+function overload(){
+  if($velocity.value > 20){
+    $(".overload").show();
+    setTimeout(function() { $(".overload").hide(); }, 3000);
+    $velocity.value = 1;
+  }
 }
 
 }
