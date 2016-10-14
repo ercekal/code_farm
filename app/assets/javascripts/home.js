@@ -14,7 +14,7 @@ function Chicken(xPos, yPos) {
   this.y = yPos;
   this.state = 0;
   this.image = new Image();
-  this.image.src = '../images/4chickens.png';
+  this.image.src = '../images/HeadWobbleandFlap.png';
   this.width = 400;
   this.height= 600;
   this.frameIndex = 0;
@@ -53,5 +53,5 @@ Chicken.prototype.update = function () {
 
 function drawChicken() {
   chicken.draw(ctx);
-  var loopTimer = setTimeout ('drawChicken();', 100)
+   loopTimer = setTimeout ('drawChicken();', 400)
 }
