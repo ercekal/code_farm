@@ -1,5 +1,6 @@
 function loadPageTwo() {
-
+if (currentUserName !== undefined){
+$("#user_name").html("Signed in as " + currentUserName); }
 var canvas;
 var chicken;
 var spriteRotation = 0;

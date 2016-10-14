@@ -1,10 +1,20 @@
+var currentUserName;
+
 function assignName(name){
   $("#name_variable").html(name);
+  setName(name);
+  $("#user_name").html("Signed in as " + currentUserName);
+
+  // $("#user_signin_name").style.display = "block";
 }
 
 function replaceName(name, code_name){
   $(".name").html(name);
   $("#code_name").html(code_name);
+}
+
+function setName(name) {
+  currentUserName = name;
 }
 
 function upcase(name){

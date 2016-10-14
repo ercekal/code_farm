@@ -1,4 +1,6 @@
 function loadPageOne() {
+    if (currentUserName !== undefined){
+    $("#user_name").html("Signed in as " + currentUserName); }
     init();
     var c;
     var ctx;
