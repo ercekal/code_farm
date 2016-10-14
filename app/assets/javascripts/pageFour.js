@@ -9,12 +9,6 @@ var $full = document.getElementById('full');
 var $empty = document.getElementById('empty');
 var $if_button = document.getElementById('if_button');
 var $feedback = document.getElementById('feedback');
-// var $arrayIndex=document.getElementById('arrayIndex');
-// var $arrayPop=document.getElementById('arrayPop');
-// var $arrayNewBtn=document.getElementById('arrayNewBtn');
-// var $arrayIndexBtn=document.getElementById('arrayIndexBtn');
-// var $arrayPopBtn=document.getElementById('arrayPopBtn');
-
 
 function init() {
   canvas = document.getElementById("canvas");
