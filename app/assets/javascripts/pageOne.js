@@ -1,7 +1,7 @@
 function loadPageOne() {
+    if (loopTimer) { clearTimeout(loopTimer); }
     init();
     var c;
-    var ctx;
     var chicken;
 
     var width = 129;
@@ -24,8 +24,6 @@ function loadPageOne() {
       ctx = c.getContext("2d");
       loadGraphics();
       setTimeout(draw, 1000);
-      console.log(chicken.width);
-      console.log(chicken.height);
     }
 
     function loadGraphics() {
@@ -39,21 +37,25 @@ function loadPageOne() {
     }
 
     $width.addEventListener("keyup", function(){
+      ctx.clearRect(0,0,750,700);
         width=this.value;
         draw();
     });
 
     $height.addEventListener("keyup", function(){
+      ctx.clearRect(0,0,750,700);
       height=this.value;
       draw();
     });
 
     $xPosition.addEventListener("keyup", function(){
+      ctx.clearRect(0,0,750,700);
       x=this.value;
       draw();
     });
 
     $yPosition.addEventListener("keyup", function(){
+      ctx.clearRect(0,0,750,700);
       y=this.value;
       draw();
     });
@@ -72,7 +74,7 @@ function loadPageOne() {
     }
 
     function draw() {
-      ctx.clearRect(0,0,canvas.width,canvas.height);
+      ctx.clearRect(0,0,750,700);
       drawSprite(chicken, x, y, 0, 1);
     }
 
