@@ -11,38 +11,47 @@
         <div class="arraysDescription">
           <div class="div1">
             <p>
-              <b>IF</b> and <b>ELSE</b> decides what our code does depending on what we tell it to look out for. <b>IF</b> says.... "if this thing is true, do what is on the line below. <b>ELSE</b> says... if what we said above isn't true, do the next line. </p>
-            <p>
-              Enter a number between 1 and 4 to call chickens to your farm:
-            </p>
-            <span>
-              <input type="integer" id="chickenGenerate">
-              <button type="button" id="getChickens">Generate chickens</button>
-            </span>
+              <b>IF</b> and <b>ELSE</b> statements decide what our code does depending on what we tell it to look out for and what we tell it to do. <br><br>
+              <b>IF</b> says.... if "something" is true, do what I tell you on the line below. <br><br>
+              <b>ELSE</b> says... if what we said above isn't true, do what I tell you below instead. </p>
           </div>
-          <div class="row" id="farm" style="display: none;" >
-            <br>
-            <p>The farm can only have 4 chickens at a time. try changing the number of chickens and see if you can discover how the code below works </p>
-            <p>(it checks if the farm is full).  </p>
-              <br>
-            <div class="col-sm-5">
 
-              <p><b>IF</b> there are 4 chickens</p>
-              <p>   puts "the farm is full"</p>
-              <p><b>ELSE</b></p>
-              <p>   puts "chickens welcome!"</p>
-              <p><b>END</b></p>
-              <br>
-              <button type="button" id="if_button">Check if the farm is full</button>
-            <br>
-          </div>
-          <div class="col-sm-7" id="feedback" style="display: none;" >
-            <h1 id= "full" style= "display: none;">THE FARM IS FULL</h1>
-              <h1 id= "empty" style= "display: none;">CHICKENS WELCOME</h1>
+          <!-- to go into first next div -->
+          <div class="div2">
+              <p>
+                Enter a number between 1 and 4 to invite chickens on your farm:
+              </p>
+              <span>
+                <input type="integer" id="chickenGenerate">
+                <button type="button" id="getChickens">Invite chickens</button>
+              </span>
 
-            <br>
+              <br>
+              <p> Your farm only has space for 4 chickens (farm_capacity=4). To check whether you have space for more chickens you can use the IF/ELSE logic below </p>
+                <br>
+              <div class="col-sm-5">
+
+                <p><b>IF</b> farm_capacity == 4 <i>(You invited 4 chickens on your farm)</i></p>
+                <p>   puts "THE FARM IS FULL"</p>
+                <p><b>ELSE</b></p>
+                <p>   puts "CHICKENS WELCOME!"</p>
+                <p><b>END</b></p>
+                <br>
+                <button type="button" id="if_button">Run the code</button>
+              <br>
+              <div class="col-sm-7" id="feedback" style="display: none;" >
+                <h1 id= "full" style= "display: none;">THE FARM IS FULL</h1>
+                  <h1 id= "empty" style= "display: none;">CHICKENS WELCOME!</h1>
+
+                <br>
+              </div>
+            </div>
           </div>
-        </div>
+
+          <!-- <div class="row" id="farm" style="display: none;" >
+
+          </div> -->
+
         </div>
       </div>
     </div>
