@@ -1,5 +1,8 @@
 function loadPageTwo() {
 
+if (loopTimer) { clearTimeout(loopTimer); }
+if (interval) { clearInterval(interval); }
+var ctx;
 var canvas;
 var chicken;
 var spriteRotation = 0;
@@ -9,7 +12,6 @@ var sign = 1;
 var interval;
 var chickenSpeed = 1;
 var $velocity=document.getElementById('velocity');
-var ctx;
 
 
 init();
