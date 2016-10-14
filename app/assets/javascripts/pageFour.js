@@ -1,4 +1,6 @@
 function loadPageFour(){
+if (currentUserName !== undefined){
+$("#user_name").html("Signed in as " + currentUserName); }
 if (loopTimer) { clearTimeout(loopTimer); }
 if (interval) { clearInterval(interval); }
 var interval;

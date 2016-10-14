@@ -1,4 +1,6 @@
 function loadHomePage() {
+  if (currentUserName !== undefined){
+  $("#user_name").html("Signed in as " + currentUserName); }
   chicken = new Chicken(0,0);
   canvas = document.getElementById("homeCanvas");
   ctx = canvas.getContext('2d');

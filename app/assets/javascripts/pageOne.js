@@ -1,8 +1,13 @@
 function loadPageOne() {
+    if (currentUserName !== undefined){
+    $("#user_name").html("Signed in as " + currentUserName); }
     if (loopTimer) { clearTimeout(loopTimer); }
+    if (interval) { clearInterval(interval); }
+
     init();
     var c;
     var chicken;
+    var loopTimer;
 
     var width = 129;
     var height = 240;
@@ -23,7 +28,7 @@ function loadPageOne() {
       c = document.getElementById("canvas");
       ctx = c.getContext("2d");
       loadGraphics();
-      setTimeout(draw, 1000);
+      loopTimer = setTimeout(draw, 1000);
     }
 
     function loadGraphics() {

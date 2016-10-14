@@ -1,4 +1,6 @@
 function loadPageThree(){
+if (currentUserName !== undefined){
+$("#user_name").html("Signed in as " + currentUserName); }
 init();
 
 var chicken;

@@ -1,10 +1,21 @@
+if (currentUserName !== undefined){
+$("#user_name").html("Signed in as " + currentUserName); }
+
+var currentUserName;
+
 function assignName(name){
   $("#name_variable").html(name);
+  setName(name);
+  $("#user_name").html("Signed in as " + currentUserName);
 }
 
 function replaceName(name, code_name){
   $(".name").html(name);
   $("#code_name").html(code_name);
+}
+
+function setName(name) {
+  currentUserName = name;
 }
 
 function upcase(name){

@@ -1,7 +1,10 @@
 function loadPageTwo() {
+if (currentUserName !== undefined){
+$("#user_name").html("Signed in as " + currentUserName); }
 
 if (loopTimer) { clearTimeout(loopTimer); }
 if (interval) { clearInterval(interval); }
+
 var ctx;
 var canvas;
 var chicken;
