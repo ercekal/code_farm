@@ -49,14 +49,14 @@
             <p id="demo3"></p>
           </div>
 
-          <div class="div3">
+          <div class="div2">
             <div class="toggle_button">
               <a href="javascript:void(0);" id="toggle_value">Next</a>
             </div>
           </div>
-          <div class="div4" style="display:none">
+          <div class="div3" style="display:none">
             <div class="toggle_button">
-              <a href="#" id="toggle_value">Next</a>
+              <%= link_to 'Next', pages_page4_path %>
             </div>
           </div>
         </div>
@@ -64,8 +64,6 @@
     </div>
   </div>
 </div>
-
-
 
 <script>
   document.onload = loadPageThree();
@@ -75,7 +73,7 @@
           return function()
           {
              $(".div" + counter).hide();
-             counter = (counter ) + 1;
+             counter = counter + 1;
              $(".div" + counter).show();
           }
           })());

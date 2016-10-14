@@ -56,4 +56,14 @@ feature 'Pages' do
       expect(page).to have_content "Logic"
     end
   end
+
+  # context 'Page 3 to Page 4' do
+  #   scenario 'click next 3 times takes you to page 4' do
+  #     visit pages_page3_path
+  #     click_link "Next"
+  #     click_link "Next"
+  #     click_link "Next"
+  #     expect(current_path).to eq pages_page4_path
+  #   end
+  # end
 end

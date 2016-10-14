@@ -1,4 +1,7 @@
 function loadPageFour(){
+if (loopTimer) { clearTimeout(loopTimer); }
+if (interval) { clearInterval(interval); }
+var interval;
 init();
 
 var chicken;
@@ -9,6 +12,7 @@ var $full = document.getElementById('full');
 var $empty = document.getElementById('empty');
 var $if_button = document.getElementById('if_button');
 var $feedback = document.getElementById('feedback');
+var $error_msg = document.getElementById('error_msg');
 
 function init() {
   canvas = document.getElementById("canvas");
@@ -43,18 +47,25 @@ function drawSprite(imageObject, x, y, rotation, scale) {
 $getChickens.addEventListener("click", function(){
   if($chickenGenerate.value === "1") {
     $farm.style.display = "block";
+    $error_msg.innerHTML = "";
     renderScene1();
   } else if ($chickenGenerate.value === "2") {
     $farm.style.display = "block";
+    $error_msg.innerHTML = "";
     renderScene2();
   } else if ($chickenGenerate.value === "3") {
     $farm.style.display = "block";
+    $error_msg.innerHTML = "";
     renderScene3();
   } else if ($chickenGenerate.value === "4") {
     $farm.style.display = "block";
+    $error_msg.innerHTML = "";
     renderScene4();
   } else {
-    alert('Please enter a number between 1 and 4');}
+    $chickenGenerate.value = "";
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    $farm.style.display = "none";
+    $error_msg.innerHTML = 'Please enter a number between 1 and 4';}
 });
 
 function renderScene1() {

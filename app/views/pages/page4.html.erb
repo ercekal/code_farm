@@ -9,49 +9,45 @@
       <div class="right-content">
         <h1>Logic</h1>
         <div class="arraysDescription">
+
           <div class="div1">
             <p>
-              <b>IF</b> and <b>ELSE</b> statements decide what our code does depending on what we tell it to look out for and what we tell it to do. <br><br>
-              <b>IF</b> says.... <i>if "something" is true, do what I tell you on the line below.</i> <br><br>
-              <b>ELSE</b> says... <i>if what we said above isn't true, do what I tell you below instead.</i> </p>
-          </div>
-
-          <!-- to go into first next div -->
-          <div class="div2">
-              <p>
-                Enter a number between 1 and 4 to invite chickens on your farm:
-              </p>
-              <span>
-                <input type="integer" id="chickenGenerate">
-                <button type="button" id="getChickens">Invite chickens</button>
-              </span>
-              <br>
-              <br>
-              <p> Your farm only has space for 4 chickens (farm_capacity=4). To check whether you have space for more chickens you can use the IF/ELSE logic below </p>
-                <br>
-              <div class="col-sm-5">
-
-                <p><b>IF</b> farm_capacity == 4 <i>(You invited 4 chickens on your farm)</i></p>
-                <p>   puts "THE FARM IS FULL"</p>
-                <p><b>ELSE</b></p>
-                <p>   puts "CHICKENS WELCOME!"</p>
-                <p><b>END</b></p>
-                <br>
-                <button type="button" id="if_button">Run the code</button>
-              <br>
-              <div class="col-sm-7" id="feedback" style="display: none;" >
-                <h1 id= "full" style= "display: none;">THE FARM IS FULL</h1>
-                  <h1 id= "empty" style= "display: none;">CHICKENS WELCOME!</h1>
-
-                <br>
-              </div>
+            <b>IF</b> and <b>ELSE</b> statements decide what our code does depending on what we tell it to look out for and what we tell it to do. <br><br>
+            <b>IF</b> says.... <i>if "something" is true, do what I tell you on the line below.</i> <br><br>
+            <b>ELSE</b> says... <i>if what we said above isn't true, do what I tell you below instead.</i> </p>
             </div>
+            <div class="div2">
+                <p>
+                  Enter a number between 1 and 4 to invite chickens on your farm:
+                </p>
+                <span>
+                  <input type="integer" id="chickenGenerate">
+                  <button type="button" id="getChickens">Invite chickens</button>
+                </span>
           </div>
 
-          <!-- <div class="row" id="farm" style="display: none;" >
+          <div class="div3" id="farm" style="display: none;" >
+            <p> Your farm only has space for 4 chickens (farm_capacity=4). To check whether you have space for more chickens you can use the IF/ELSE logic below </p>
+            <div class="col-sm-5">
+              <p><b>IF</b> farm_capacity == 4 <i>(You invited 4 chickens on your farm)</i></p>
+              <p>   puts "THE FARM IS FULL"</p>
+              <p><b>ELSE</b></p>
+              <p>   puts "CHICKENS WELCOME!"</p>
+              <p><b>END</b></p>
+              <br>
+              <button type="button" id="if_button">Run the code</button>
+              <br>
+            </div>
 
-          </div> -->
+            <div class="col-sm-7" id="feedback" style="display: none;" >
+              <h1 id= "full" style= "display: none;">THE FARM IS FULL</h1>
+              <h1 id= "empty" style= "display: none;">CHICKENS WELCOME</h1>
+          </div>
 
+          <div class="toggle_button">
+            <%= link_to 'Play again!', pages_home_path %>
+          </div>
+        </div>
         </div>
       </div>
     </div>
