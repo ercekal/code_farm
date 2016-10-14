@@ -40,6 +40,8 @@ group :test do
   gem 'capybara'
   gem 'poltergeist'
   gem 'phantomjs'
+  gem 'selenium-webdriver'
+  gem 'simplecov'
 
 end
 
