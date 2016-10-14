@@ -95,10 +95,12 @@ $if_button.addEventListener("click", function() {
   var audio = new Audio('http://www.wavsource.com/snds_2016-10-09_1797402624934163/animals/chicken.wav');
   audio.play();
   $feedback.style.display = "block";
-  if ($chickenGenerate.value == "4"){
-    $full.style.display = "block";
-  } else {
-    $empty.style.display = "block";
+  if ($chickenGenerate.value >= "4"){
+    $(".full").show();
+    $(".empty").hide();
+    } else {
+    $(".empty").show();
+    $(".full").hide();
   }
 });
 }
