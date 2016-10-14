@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/summerbrines/Projects/w9_code_farm/code_farm/spec/features/pages_feature_spec.rb": [
+      "/Users/dev/Library/Mobile Documents/com~apple~CloudDocs/Projects/wk9/code_farm/spec/features/pages_feature_spec.rb": [
         1,
         null,
         1,
@@ -57,86 +57,94 @@
         1,
         1,
         1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/dev/Library/Mobile Documents/com~apple~CloudDocs/Projects/wk9/code_farm/spec/rails_helper.rb": [
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
         1,
         null,
         null,
         null
       ],
-      "/Users/summerbrines/Projects/w9_code_farm/code_farm/spec/rails_helper.rb": [
-        null,
-        1,
-        1,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        1,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        null,
-        1,
-        null,
-        1,
-        null,
-        null,
-        null,
-        null,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        null,
-        null,
-        1,
-        null,
-        null,
-        null
-      ],
-      "/Users/summerbrines/Projects/w9_code_farm/code_farm/config/environment.rb": [
+      "/Users/dev/Library/Mobile Documents/com~apple~CloudDocs/Projects/wk9/code_farm/config/environment.rb": [
         null,
         1,
         null,
         null,
         1
       ],
-      "/Users/summerbrines/Projects/w9_code_farm/code_farm/config/application.rb": [
+      "/Users/dev/Library/Mobile Documents/com~apple~CloudDocs/Projects/wk9/code_farm/config/application.rb": [
         1,
         null,
         1,
@@ -173,12 +181,12 @@
         null,
         null
       ],
-      "/Users/summerbrines/Projects/w9_code_farm/code_farm/config/boot.rb": [
+      "/Users/dev/Library/Mobile Documents/com~apple~CloudDocs/Projects/wk9/code_farm/config/boot.rb": [
         1,
         null,
         1
       ],
-      "/Users/summerbrines/Projects/w9_code_farm/code_farm/config/environments/test.rb": [
+      "/Users/dev/Library/Mobile Documents/com~apple~CloudDocs/Projects/wk9/code_farm/config/environments/test.rb": [
         1,
         null,
         null,
@@ -222,7 +230,7 @@
         null,
         null
       ],
-      "/Users/summerbrines/Projects/w9_code_farm/code_farm/config/initializers/assets.rb": [
+      "/Users/dev/Library/Mobile Documents/com~apple~CloudDocs/Projects/wk9/code_farm/config/initializers/assets.rb": [
         null,
         null,
         null,
@@ -235,7 +243,7 @@
         null,
         null
       ],
-      "/Users/summerbrines/Projects/w9_code_farm/code_farm/config/initializers/backtrace_silencers.rb": [
+      "/Users/dev/Library/Mobile Documents/com~apple~CloudDocs/Projects/wk9/code_farm/config/initializers/backtrace_silencers.rb": [
         null,
         null,
         null,
@@ -244,18 +252,18 @@
         null,
         null
       ],
-      "/Users/summerbrines/Projects/w9_code_farm/code_farm/config/initializers/cookies_serializer.rb": [
+      "/Users/dev/Library/Mobile Documents/com~apple~CloudDocs/Projects/wk9/code_farm/config/initializers/cookies_serializer.rb": [
         null,
         null,
         1
       ],
-      "/Users/summerbrines/Projects/w9_code_farm/code_farm/config/initializers/filter_parameter_logging.rb": [
+      "/Users/dev/Library/Mobile Documents/com~apple~CloudDocs/Projects/wk9/code_farm/config/initializers/filter_parameter_logging.rb": [
         null,
         null,
         null,
         1
       ],
-      "/Users/summerbrines/Projects/w9_code_farm/code_farm/config/initializers/inflections.rb": [
+      "/Users/dev/Library/Mobile Documents/com~apple~CloudDocs/Projects/wk9/code_farm/config/initializers/inflections.rb": [
         null,
         null,
         null,
@@ -273,18 +281,18 @@
         null,
         null
       ],
-      "/Users/summerbrines/Projects/w9_code_farm/code_farm/config/initializers/mime_types.rb": [
+      "/Users/dev/Library/Mobile Documents/com~apple~CloudDocs/Projects/wk9/code_farm/config/initializers/mime_types.rb": [
         null,
         null,
         null,
         null
       ],
-      "/Users/summerbrines/Projects/w9_code_farm/code_farm/config/initializers/session_store.rb": [
+      "/Users/dev/Library/Mobile Documents/com~apple~CloudDocs/Projects/wk9/code_farm/config/initializers/session_store.rb": [
         null,
         null,
         1
       ],
-      "/Users/summerbrines/Projects/w9_code_farm/code_farm/config/initializers/wrap_parameters.rb": [
+      "/Users/dev/Library/Mobile Documents/com~apple~CloudDocs/Projects/wk9/code_farm/config/initializers/wrap_parameters.rb": [
         null,
         null,
         null,
@@ -300,7 +308,7 @@
         null,
         null
       ],
-      "/Users/summerbrines/Projects/w9_code_farm/code_farm/config/routes.rb": [
+      "/Users/dev/Library/Mobile Documents/com~apple~CloudDocs/Projects/wk9/code_farm/config/routes.rb": [
         1,
         1,
         null,
@@ -319,14 +327,15 @@
         1,
         null
       ],
-      "/Users/summerbrines/Projects/w9_code_farm/code_farm/spec/helper.rb": [
+      "/Users/dev/Library/Mobile Documents/com~apple~CloudDocs/Projects/wk9/code_farm/spec/helper.rb": [
         1,
         4,
         4,
         4,
+        4,
         null
       ],
-      "/Users/summerbrines/Projects/w9_code_farm/code_farm/spec/features/welcome_feature_spec.rb": [
+      "/Users/dev/Library/Mobile Documents/com~apple~CloudDocs/Projects/wk9/code_farm/spec/features/welcome_feature_spec.rb": [
         1,
         null,
         1,
@@ -373,34 +382,34 @@
         1,
         1,
         null,
-        null,
-        null
-      ],
-      "/Users/summerbrines/Projects/w9_code_farm/code_farm/app/controllers/pages_controller.rb": [
-        1,
-        1,
-        null,
-        null,
-        1,
-        null,
-        null,
-        1,
-        null,
-        null,
-        1,
-        null,
-        null,
-        1,
-        null,
-        null,
-        1,
-        null,
-        null,
-        1,
         null,
         null
       ],
-      "/Users/summerbrines/Projects/w9_code_farm/code_farm/app/controllers/application_controller.rb": [
+      "/Users/dev/Library/Mobile Documents/com~apple~CloudDocs/Projects/wk9/code_farm/app/controllers/pages_controller.rb": [
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/Users/dev/Library/Mobile Documents/com~apple~CloudDocs/Projects/wk9/code_farm/app/controllers/application_controller.rb": [
         1,
         null,
         null,
@@ -408,6 +417,6 @@
         null
       ]
     },
-    "timestamp": 1476444349
+    "timestamp": 1476454898
   }
 }
