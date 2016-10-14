@@ -17,28 +17,38 @@
               Generate a new array by entering the 'new' method below
             </p>
             <span>
-              <p>chicken_perch = Array.<input type="text" id="newArray">(4, chickens)</p>
+
+              <p>chicken_perch = Array.<input type="text" id="newArray" style="width:40px" pattern="new" required>(4, chickens)</p>
+
               <button type="button" id="arrayNewBtn">Generate</button>
             </span><br>
+            <p id="demo"></p>
           </div>
 
           <div class='div2' style="display:none">
             <p> Array items can be selected by their "index" with the first item being 0.  Have a play below by entering the index of the chickens array you created.</p>
             <span>
               <p>chicken_perch[
-                <input type="text" id="arrayIndex">]</p>
+
+                <input type="number" id="arrayIndex" style="width:20px" min="0" max="3" required> ]</p>
+
               <button type="button" id="arrayIndexBtn">Select chicken</button>
             </span>
+            <p id="demo2"></p>
           </div>
 
           <div class='div3' style="display:none">
             <p> Array items can be popped. Try 'popping' off the last element.</p>
             <span>
               <p>chicken_perch.
-                <input type="text" id="arrayPop"></p>
+
+                <input type="text" id="arrayPop" style="width:40px" pattern="pop" required></p>
+
               <button type="button" id="arrayPopBtn">Pop chicken</button>
             </span>
+            <p id="demo3"></p>
           </div>
+
           <div class="div3">
             <div class="toggle_button">
               <a href="javascript:void(0);" id="toggle_value">Next</a>
@@ -55,9 +65,7 @@
   </div>
 </div>
 
-<div class=fence>
-  <img src="../images/fence3.png" alt="Fence" class="center-block" width="100%" height="60%" />
-</div>
+
 
 <script>
   document.onload = loadPageThree();
