@@ -2,12 +2,14 @@ function loadHomePage() {
   chicken = new Chicken(0,0);
   canvas = document.getElementById("homeCanvas");
   ctx = canvas.getContext('2d');
+  if (loopTimer) { clearTimeout(loopTimer); }
   drawChicken();
 }
 
 var chicken;
 var canvas;
 var ctx;
+var loopTimer;
 
 function Chicken(xPos, yPos) {
   this.x = xPos;
