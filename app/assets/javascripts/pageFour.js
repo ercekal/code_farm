@@ -1,7 +1,7 @@
 function loadPageFour(){
 if (loopTimer) { clearTimeout(loopTimer); }
 if (interval) { clearInterval(interval); }
-
+var interval;
 init();
 
 var chicken;

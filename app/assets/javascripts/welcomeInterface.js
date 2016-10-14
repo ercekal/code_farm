@@ -26,3 +26,7 @@ function replace(name){
   var replace = name.replace(/A|a|E|e|I|i|O|o|U|u/g, "★");
   replaceName(replace, "name.replace");
 }
+
+function unhideMessage(){
+  $("#message").toggle();
+}
