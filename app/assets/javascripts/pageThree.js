@@ -32,7 +32,13 @@ function loadSprite(imageName) {
 // user initiated functions
 
 $arrayNewBtn.addEventListener("click", function(){
-  renderScene();
+  var newArray = $newArray;
+    if (newArray.checkValidity() === false) {
+        document.getElementById("demo").innerHTML = "Sorry, that's not the right method!";
+    } else {
+        document.getElementById("demo").innerHTML = "";
+        renderScene();
+    }
 });
 
 function renderScene() {
@@ -42,25 +48,34 @@ function renderScene() {
     drawSprite(chicken, 250, 225, 0, 0.4);
     drawSprite(chicken, 350, 225, 0, 0.4);
     drawSprite(chicken, 450, 225, 0, 0.4);
-  } else {
-    alert("Try again!");
   }
 }
 
 $arrayIndexBtn.addEventListener("click", function(){
-  var index = $arrayIndex.value;
-  if (index == "0") {update0();}
-  else if (index == "1") {update1();}
-  else if (index == "2") {update2();}
-  else if (index == "3") {update3();}
-  else {
-    alert("This is not an index! ");
-  }
+  var index = $arrayIndex;
+    if (index.checkValidity() === false) {
+        document.getElementById("demo2").innerHTML = "Sorry, no chicken has that index!";
+    } else {
+        document.getElementById("demo2").innerHTML = "";
+        changeIndex(index);
+    }
 });
 
+function changeIndex(index) {
+  if (index.value == "0") {update0();}
+  if (index.value == "1") {update1();}
+  if (index.value == "2") {update2();}
+  if (index.value == "3") {update3();}
+}
+
 $arrayPopBtn.addEventListener("click", function(){
-  if ($arrayPop.value == "pop") {interval = setInterval(chickenPop, 20);}
-  else { alert("Try again!"); }
+  var arrayPop = $arrayPop;
+    if (arrayPop.checkValidity() === false) {
+        document.getElementById("demo3").innerHTML = "Sorry, that's not the right method!";
+    } else {
+        document.getElementById("demo3").innerHTML = "";
+        interval = setInterval(chickenPop, 20);
+    }
 });
 
 function chickenPop() {
