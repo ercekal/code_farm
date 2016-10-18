@@ -19,7 +19,7 @@ function Chicken(xPos, yPos) {
   this.image = new Image();
   this.image.src = '../images/HeadWobbleandFlap.png';
   this.width = 400;
-  this.height= 600;
+  this.height= 599;
   this.frameIndex = 0;
   this.cheatPosition = [
     [0, 0],
